@@ -1,0 +1,272 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js ayu">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Contributing to an opensource learning project built using Rust&#x27;s Bevy game engine - 🦀 decodedHTML 🦀</title>
+
+
+        <!-- Custom HTML head -->
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y7D01T30H4"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'G-Y7D01T30H4');
+        </script>
+        
+<meta property="og:type" content="website">
+        <meta property="og:url" content="https://decodedhtml.com/">
+        <meta property="og:description" content="We help the programmer in you to code better, faster, cleaner. We contain the best practices every programmer should follow. You may also find occasional Rust articles here. Also, HTML is not a real programming language!">
+        <meta property="og:image" content="https://decodedhtml.com/images/preview.png">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:image:type" content="image/png">
+        
+<meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://decodedhtml.com/">
+        <meta property="twitter:description" content="We help the programmer in you to code better, faster, cleaner. We contain the best practices every programmer should follow. You may also find occasional Rust articles here. Also, HTML is not a real programming language!">
+        <meta property="twitter:image" content="https://decodedhtml.com/images/preview.png">
+        <meta name="description" content="We help the programmer in you to code better, faster, cleaner. We contain the best practices every programmer should follow. You may also find occasional Rust articles here. Also, HTML is not a real programming language!">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "ayu" : "ayu";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('ayu')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="introduction.html">Decoding HTML is not a Crime</a></li><li class="spacer"></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Rust Articles</li><li class="chapter-item expanded "><a href="experimenting-with-rust.html"><strong aria-hidden="true">1.</strong> Experimenting With Rust</a></li><li class="chapter-item expanded "><a href="serenity.html"><strong aria-hidden="true">2.</strong> Power of Rust in the palm of my Discord Server</a></li><li class="chapter-item expanded "><a href="why-i-choose-rust.html"><strong aria-hidden="true">3.</strong> Why I choose Rust</a></li><li class="chapter-item expanded "><a href="contributing-to-velo-crate.html" class="active"><strong aria-hidden="true">4.</strong> Contributing to an opensource learning project built using Rust's Bevy game engine</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Best Practices for Programmers</li><li class="chapter-item expanded "><a href="remove-console-logs-in-production.html"><strong aria-hidden="true">5.</strong> Remove console.logs in Production</a></li><li class="chapter-item expanded "><a href="protecting-reducing-eye-strain-programmers.html"><strong aria-hidden="true">6.</strong> Reducing & Protecting from Eye Strain for Programmers</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Personal Blabs</li><li class="chapter-item expanded "><a href="useless-opensource-contributions.html"><strong aria-hidden="true">7.</strong> My not-really-useless opensource contributions</a></li><li class="chapter-item expanded "><a href="normalize-inclusive-language.html"><strong aria-hidden="true">8.</strong> Normalize use of Inclusive Language</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="about.html">About Me</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">🦀 decodedHTML 🦀</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="contributing-to-an-opensource-learning-project-built-using-rusts-bevy-game-engine"><a class="header" href="#contributing-to-an-opensource-learning-project-built-using-rusts-bevy-game-engine">Contributing to an opensource learning project built using Rust's Bevy game engine</a></h1>
+<p>Recently I stubled upon an issues <a href="https://this-week-in-rust.org/blog/2023/04/26/this-week-in-rust-492/#call-for-participation">in April's this-week-in-rust.org's call for participation section</a>.  The issue was of an <a href="https://github.com/StaffEngineer/velo">Rust learning project - Velo</a>, a learning app project for brainstorming. As I was planning to get familar with game development technologies I loved the fact that this project was built with Rust's game engine Bevy. And as of the time of this writing <a href="https://bevyengine.org/news/bevy-webgpu/">Bevy is now on their latest v0.11 release, which has WebGPU support built-in</a>. I really want to play with the shaders to create those creative-coding/generative artworks.</p>
+<h2 id="surfing-the-codebase"><a class="header" href="#surfing-the-codebase">Surfing the Codebase</a></h2>
+<p>And so... I have been trying to use just Neovim to get comfortable in using Rust Lang. To be efficient and productive were my sole goals, at the time I'm writing this text. As I was getting distracted by a lot of social media platforms. I was wasting a ton of time. So my decision to switch to neovim. By making it a bit harder to use the mouse I'm seeing a lot of changes. I keep forgetting the shortcut keys if I'm distracted. Especially the ones I set in Neovim. I then try to remember that which switches me back to the flow state of programming. Which is what cypherpunks do! They Write Code! 😼</p>
+<p>Initially I started using VS Code but the amount of times I got distracted was getting higher and higher, with all those extensions that was taking up space on my laptop's display. So many GUI taking up display space. It's a competition for them to be easily accessible. But at the same time I think it kills the IDE. You might say why not customize it. But I don't think I want to. I might later join as a contributor to VS Code, until then I don't think I want to waste time on doing fancy stuff. Neovim just lets me think and write code 😼.</p>
+<p>And I'm using Spacemacs to write this devlog. I'll later try to write this in using Emacs own org mode. But until then markdown is what I'm using to write this. And I'm using Rust's mdbook to bring it you. Everything is a draft until I add it to the summary file (more intructions to generate an online book using mdbook).</p>
+<h3 id="hacking-neovim-for-lightning-fast-code-navigation"><a class="header" href="#hacking-neovim-for-lightning-fast-code-navigation">Hacking Neovim for lightning fast code navigation</a></h3>
+<p>Neovim uses lua for it's configurations. Again saving time to get productive in programming, no need to learn more to customize deeply. I have pushed my current Neovim config commit in a GitHub repository: <a href="https://github.com/riojosdev/lunarvim-for-rustaceans">Lunarvim For Rustaceans</a>. Yeah, I forgot it's actually Lunarvim. I wanted to quickly start working on my contributions. In my opinion and planning setting up Neovim from scratch is the right move to train yourself to be a more productive and efficient programmer.</p>
+<h4 id="finding-where-each-functionalities-lies-for-quick-modifications"><a class="header" href="#finding-where-each-functionalities-lies-for-quick-modifications">Finding where each functionalities lies, for quick modifications</a></h4>
+<p>I started trying to understand what each dependencies, plugins, modules, systems are being used by Velo. And what their purpose was. And there are different approaches to understand a codebase.</p>
+<blockquote>
+<p>To quickly understand a codebase is an important skill a developer can have. If a developer has trouble navigating unfamilar code, they could waste a lot of time trying to orient themselves.</p>
+</blockquote>
+<p>This quote reminded me to improve my development workflow more efficiently. I started using different Neovim plugins, to help me quickly fix some issue. More specifically, I first installed <a href="https://github.com/nvim-tree/nvim-tree.lua">nvim-tree</a> for the <strong>file navigation sidebar</strong>. It gave me the power to have an bird's eye view / top-down view of the project. Never have I ever appreciated the use of seeing the file structure before. While using VS Code or any other file explorer included application or an file explorer itself, the ability to see the file structure was always available. I knew it was quick to use it, but I never thought like it was quick to interact with the file structure view rather than any other way. Some ways are just shorter.</p>
+<h4 id="the-too-long-dont-read-tldr"><a class="header" href="#the-too-long-dont-read-tldr">The Too Long Don't Read (TLDR)</a></h4>
+<p>Okay, I had the file structure view, but there were some files which had longer code. And I was again spending too much time on one area of the codebase. I found some discussions online about enabling folded expressions in the LSP's setup configuration.</p>
+<p>Did that and ...</p>
+<p><img src="./images/folded-expressions-lunarvim.png" alt="" /></p>
+<p>This is what I should have always been doing, just looking at the definition is enough, I could just come back and go through the logic more deeper if it's where I have to be working on. And most opensource friendly projects should have good naming conventions for easy code editing accessiblility.</p>
+<h4 id="split--jump-windows"><a class="header" href="#split--jump-windows">Split &amp; Jump Windows</a></h4>
+<p>Sometimes no matter what all tools you use to skip looking at two places at once, you will need do that sometimes. At that times, spliting the window can make use of your available screen area and provide you with useful information for your current task.</p>
+<p><img src="./images/split-windows.png" alt="" /></p>
+<h4 id="telescope---fuzzy-finder"><a class="header" href="#telescope---fuzzy-finder">Telescope - Fuzzy Finder</a></h4>
+<p>Telescope plugin for Vim/Neovim is an awesome feature. It helps you find, filter, preview, pick. Mostly it's used to find the file or line you want. But it can do even more, like going through the undo history, open most used files, etc. There are a lot of child plugins for the Telescope plugin.
+Also setting the <code>oldfiles</code> finder and the <code>live_grep</code> would be incredible useful.</p>
+<h4 id="look-ma-no-mouse"><a class="header" href="#look-ma-no-mouse">Look Ma, no Mouse!</a></h4>
+<p>By this time all I had to do was to adjust some shortcut key configurations and I'm ready to fly through the codebase. Jumping over to the reference/implementation/definition was the keys I configured. It helps me not to waste time on the file navigation, trying to find where the types/definition/function logic are defined.</p>
+<h3 id="rust-analyzer"><a class="header" href="#rust-analyzer">Rust Analyzer</a></h3>
+<p>As Rust was going to be my primary development tool, it was the first language I tried to make my Lunarvim support. And Rust-analyzer was the most powerful tools of them all. All I did was install rust-analyzer through the plugin manager and I was good to go. I had later found out there are lots more features included in rust-analyzer. There are a few LSP client implementation which you find from the <a href="https://rust-analyzer.github.io/manual.html#vimneovim">official Rust-analyzer docs</a>. One feature any rustacean might find benificial most of the time is the inlay hints. It displays necessary type information about the variables and methods. I installed <a href="https://github.com/neoclide/coc.nvim">coc.nvim</a> and ran <code>:CocInstall coc-rust-analyzer</code> to add rust-analyzer support.</p>
+<p>I was using a notepad to write down what each types where at one point of my learning to understand a certain function implementation. I know I could use print statements, but using rust-analyzer for such debugging practices was huge time/life saver.</p>
+<p>The command to toggle inlay hints were <code>CocCommand document.toggleInlayHint</code>.</p>
+<h3 id="i-need-the-words-wrapped"><a class="header" href="#i-need-the-words-wrapped">I need the words wrapped!</a></h3>
+<p>I don't know if the inlay hints can be word wrapped, I mean it can be. But I want an existing solution.</p>
+<blockquote>
+<p>My Rust opensource journey is at the initial stages. But I'm moving forward at a good pace. Maybe because I dabbled with other programming languages before Rust. And what I have understood is that, using the right tools for the job is what makes you love programming. And the Rust language and it's development tools, is what makes my development easier, efficient and productive.</p>
+</blockquote>
+<hr />
+<h2 id="reloading-your-programming-ammo-with-the-standard-library"><a class="header" href="#reloading-your-programming-ammo-with-the-standard-library">Reloading your programming ammo with the Standard Library</a></h2>
+<div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/l0ErRLvfr2UpJoPlK" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/workaholics-comedy-central-season-2-episode-9-l0ErRLvfr2UpJoPlK">via GIPHY</a></p>
+Being familiar with some of the main standard library traits and it's methods is going to help you defeat that bug you're trying to fix, quickly! Are you using some method, that is not giving you what you wanted? Use a different method for the trait you are working on.
+<h2 id="debugging-tools"><a class="header" href="#debugging-tools">Debugging Tools</a></h2>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="why-i-choose-rust.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="remove-console-logs-in-production.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="why-i-choose-rust.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="remove-console-logs-in-production.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

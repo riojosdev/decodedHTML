@@ -1,0 +1,12 @@
+[book]
+authors = ["riojos"]
+language = "en"
+multilingual = false
+src = "src"
+title = "🦀 decodedHTML 🦀"
+description = "We help the programmer in you to code better, faster, cleaner. We contain the best practices every programmer should follow. You may also find occasional Rust articles here. Also, HTML is not a real programming language!"
+[build]
+build-dir = "docs"
+[output.html]
+default-theme = "ayu"
+preferred-dark-theme = "ayu"
