@@ -10,3 +10,7 @@ build-dir = "docs"
 [output.html]
 default-theme = "ayu"
 preferred-dark-theme = "ayu"
+no-section-label = true
+
+[output.html.print]
+enable = false
