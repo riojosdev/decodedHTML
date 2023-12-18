@@ -2,6 +2,9 @@
 [Decoding HTML is not a Crime](./introduction.md)
 
 ---
+# Content Creation
+- [How to Deal with Content Sharks](./content-creation/dealing-with-content-sharks.md)
+
 ---
 # Rust Articles
 - [Experimenting With Rust](./experimenting-with-rust.md)
