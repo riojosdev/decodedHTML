@@ -38,6 +38,7 @@
     <urls>
         <loc>https://decodedhtml.com/why-i-choose-rust.html</loc>
         <priority>0.6</priority>
+    </urls>
     <urls>
         <loc>https://decodedhtml.com</loc>
         <priority>0.4</priority>
@@ -45,6 +46,5 @@
     <urls>
         <loc>https://decodedhtml.com/introduction.html</loc>
         <priority>0.3</priority>
-    </urls>
     </urls>
 </urlset>
