@@ -30,6 +30,13 @@ window.onload = function () {
     description_metatag_twitter.content = meta_descriptionz;
     description_metatag_common.content = meta_descriptionz;
   }
+
+  // meta url
+  let meta_urlz = window.location.href;
+  let url_metatag = document.querySelectorAll('meta[property = "og:url"]')[0];
+  let url_metatag_twitter = document.querySelectorAll('meta[property = "twitter:url"]')[0];
+  url_metatag.content = meta_urlz;
+  url_metatag_twitter.content = meta_urlz;
 }
 
 // Global variable, shared between modules
