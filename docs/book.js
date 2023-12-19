@@ -3,7 +3,7 @@
 // Fix back button cache problem
 window.onunload = function () { };
 
-window.onload = function () {
+document.onreadystatechange = function () {
   // meta image (1200 X 630)
   if (document.getElementById("meta_imgz")) {
     let img_src = document.getElementById("meta_imgz").src;
