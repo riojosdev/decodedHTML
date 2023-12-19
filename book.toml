@@ -11,6 +11,7 @@ build-dir = "docs"
 default-theme = "ayu"
 preferred-dark-theme = "ayu"
 no-section-label = true
+cname = "decodedhtml.com"
 
 [output.html.print]
 enable = false

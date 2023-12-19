@@ -1,0 +1,20 @@
+User-agent: Googlebot
+Disallow: /nogooglebot/
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.decodedhtml.com/sitemap.xml
+
+#
+#
+#       .o8                                      .o8                  .o8  ooooo   ooooo ooooooooooooo ooo        ooooo ooooo                                                  
+#      "888                                     "888                 "888  `888'   `888' 8'   888   `8 `88.       .888' `888'                                                  
+#  .oooo888   .ooooo.   .ooooo.   .ooooo.   .oooo888   .ooooo.   .oooo888   888     888       888       888b     d'888   888              .ooooo.   .ooooo.  ooo. .oo.  .oo.   
+# d88' `888  d88' `88b d88' `"Y8 d88' `88b d88' `888  d88' `88b d88' `888   888ooooo888       888       8 Y88. .P  888   888             d88' `"Y8 d88' `88b `888P"Y88bP"Y88b  
+# 888   888  888ooo888 888       888   888 888   888  888ooo888 888   888   888     888       888       8  `888'   888   888             888       888   888  888   888   888  
+# 888   888  888    .o 888   .o8 888   888 888   888  888    .o 888   888   888     888       888       8    Y     888   888       o .o. 888   .o8 888   888  888   888   888  
+# `Y8bod88P" `Y8bod8P' `Y8bod8P' `Y8bod8P' `Y8bod88P" `Y8bod8P' `Y8bod88P" o888o   o888o     o888o     o8o        o888o o888ooooood8 Y8P `Y8bod8P' `Y8bod8P' o888o o888o o888o 
+#                                                                                                                                                                              
+#                                                                                                                                                                              
+                                                                                                                                                                             

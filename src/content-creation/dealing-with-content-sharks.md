@@ -1,5 +1,7 @@
 # How to Deal with Content Sharks
 
+![](./../images/fair-legal-content-credit-abstract-representation-matryoshka-dolls.png)
+
 > This is a living document to fight against the content-thieves/copyright-infringement, I'll be updating this once in a while to keep up with the latest updates. Note: I'm not a lawyer, and this is not a legal advice. But a way for you to understand just the basics. If you want legal advice please consider contacting a lawyer near you.
 
 ## Quick Intro into Content Creation & Digital Content Creators
