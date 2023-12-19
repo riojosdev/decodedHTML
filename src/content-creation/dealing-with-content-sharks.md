@@ -58,7 +58,8 @@ Some of these points are solely available to use on a specific platform. Some so
 
 > I once had [my X (Twitter) account](https://twitter.com/htmldecoder) banned as I retweeted some Cyber Security content. After clarifying with staff that I was not spamming or abusing the platform, I was able to revoke the banned status. It was then I realized I need to have a platform where I could be myself, without getting concerned if what I'm speaking is against the community guidelines. Also using your own platform, gives you the freedom to earn more revenue.
 
-So, how do you actually fight against the people stealing your content? These are a few points I have identified to reduce content stealing efforts. Note that you can't completely stop people from stealing your content, but these steps could reduce their efforts in trying to steal your efforts.
+<p id="meta_descriptionz">So, how do you actually fight against the people stealing your content? These are a few points I have identified to reduce content stealing efforts. Note that you can't completely stop people from stealing your content, but these steps could reduce their efforts in trying to steal your efforts.</p>
+
 * Have a system in place where you could track your followers. To find where a traffic is coming from. It not only helps in identifying these violators but also gives you an insight into how good your marketing efforts are.
 * You could also use internal links to link within your marketing platform. This helps you in keeping the audience stay engaged with your content. People who tries to steal your content are too lazy to even notice these internal links. And if they copy without modifying these internal links you are able to investigate the unknown traffic coming into your platform.
 * You could set a copy trigger alert to notify you when someone tries to copy the content from your page.

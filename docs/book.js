@@ -4,12 +4,31 @@
 window.onunload = function () { };
 
 window.onload = function () {
+  // meta image (1200 X 630)
   if (document.getElementById("meta_imgz")) {
     let img_src = document.getElementById("meta_imgz").src;
     let image_metatag = document.querySelectorAll('meta[property = "og:image"]')[0];
     let image_metatag_twitter = document.querySelectorAll('meta[property = "twitter:image"]')[0];
     image_metatag.content = img_src;
     image_metatag_twitter.content = img_src;
+  }
+
+  // meta title
+  let meta_titlez = document.querySelectorAll("h1")[1].children[0].innerText;
+  let title_metatag = document.querySelectorAll('meta[property = "og:title"]')[0];
+  let title_metatag_twitter = document.querySelectorAll('meta[property = "twitter:title"]')[0];
+  title_metatag.content = meta_titlez;
+  title_metatag_twitter.content = meta_titlez;
+
+  // meta description
+  if (document.getElementById("meta_descriptionz")) {
+    let meta_descriptionz = document.getElementById("meta_descriptionz").innerText;
+    let description_metatag = document.querySelectorAll('meta[property = "og:description"]')[0];
+    let description_metatag_twitter = document.querySelectorAll('meta[property = "twitter:description"]')[0];
+    let description_metatag_common = document.querySelectorAll('meta[name = "description"]')[0];
+    description_metatag.content = meta_descriptionz;
+    description_metatag_twitter.content = meta_descriptionz;
+    description_metatag_common.content = meta_descriptionz;
   }
 }
 
