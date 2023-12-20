@@ -1,4 +1,6 @@
-# Contributing to an opensource learning project built using Rust's Bevy game engine
+# Setting up Lunarvim for Rust DevOps
+
+## Contributing to an opensource learning project built using Rust's Bevy game engine
 Recently I stubled upon an issues [in April's this-week-in-rust.org's call for participation section](https://this-week-in-rust.org/blog/2023/04/26/this-week-in-rust-492/#call-for-participation).  The issue was of an [Rust learning project - Velo](https://github.com/StaffEngineer/velo), a learning app project for brainstorming. As I was planning to get familar with game development technologies I loved the fact that this project was built with Rust's game engine Bevy. And as of the time of this writing [Bevy is now on their latest v0.11 release, which has WebGPU support built-in](https://bevyengine.org/news/bevy-webgpu/). I really want to play with the shaders to create those creative-coding/generative artworks.
 
 ## Surfing the Codebase

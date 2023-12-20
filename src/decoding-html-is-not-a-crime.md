@@ -14,6 +14,3 @@ The governor is speaking for the public. All I am sure is that the dev who creat
 
 I don't even know how can I explain this... 
 > HTML is like a dictionary, that has words and its definition. HTML is used by computers to describe a webpage. Saying "building a dictionary is a crime" is itself a crime. It denies progress.
-
-## Subscribe to my Substack
-<iframe src="https://decodedhtml.substack.com/embed" width="100%" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>

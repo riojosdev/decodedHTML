@@ -1,5 +1,5 @@
 # Summary
-[Decoding HTML is not a Crime](./introduction.md)
+[About Me](./about.md)
 
 ---
 # Content Creation
@@ -10,7 +10,7 @@
 - [Experimenting With Rust](./experimenting-with-rust.md)
 - [Power of Rust in the palm of my Discord Server](./serenity.md)
 - [Why I choose Rust](./why-i-choose-rust.md)
-- [Contributing to an opensource learning project built using Rust's Bevy game engine](./contributing-to-velo-crate.md)
+- [Setting up Lunarvim for Rust DevOps](./lunarvim-for-rustaceans.md)
 
 ---
 # Best Practices for Programmers
@@ -19,8 +19,6 @@
 
 ---
 # Personal Blabs
+- [Decoding HTML is not a Crime](./decoding-html-is-not-a-crime.md)
 - [My not-really-useless opensource contributions](./useless-opensource-contributions.md)
 - [Normalize use of Inclusive Language](./normalize-inclusive-language.md)
-
----
-[About Me](./about.md)

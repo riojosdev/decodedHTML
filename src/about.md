@@ -1,8 +1,9 @@
 # About Me
-Hi, welcome to my page. I'm Rio Jos, a newbie in rustacean 🦀 community and fairly ok programmer. Currently I'm doing a undergraduate bachelors degree, in Computer Science.
+Hi, welcome to my page. I'm Rio Jos, a Programmer who loves to build stuff. I find myself constantly tinkering with Rust, JavaScript languages.
 
 I love to discuss about FOSS, creative coding and also **M E M E S**!
-## For the real geeks out there
+
+## For the Geeks out there
 I am a great fan of the sci-fi genre. Cyberpunk 🤖 genre to be more specific. Don't get me started on Hacker culture. The nerds who ❤️s to use neon green fonts on command line.
 
 ## Subscribe to my Substack Newsletter
