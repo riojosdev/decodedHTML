@@ -2,6 +2,10 @@
 [About Me](./about.md)
 
 ---
+# Web3
+- [Setup your own Standalone/Local Stellar Blockchain to test Smart Contracts & dApps](./web3/setup-your-own-standalone-stellar-blockchain-on-your-system.md)
+
+---
 # Content Creation
 - [How to Deal with Content Sharks](./content-creation/dealing-with-content-sharks.md)
 
