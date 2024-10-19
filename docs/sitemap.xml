@@ -6,11 +6,16 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>https://decodedhtml.com/devlog/nextjs-vercel-portfolio-redesign-with-tailwindcss-chakraui-and-morphing-gradient-background.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <lastmod>2024-09-30</lastmod>
+    </url>
+    <url>
         <loc>https://decodedhtml.com/web3/test-driven-development-setup-with-local-stellar-blockchain.html</loc>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <lastmod>2024-08-24</lastmod>
-    </url>
     </url>
     <url>
         <loc>https://decodedhtml.com/content-creation/dealing-with-content-sharks.html</loc>

@@ -10,6 +10,10 @@
 - [How to Deal with Content Sharks](./content-creation/dealing-with-content-sharks.md)
 
 ---
+# DevLog
+- [NEXTJS Portfolio Redesign with TailwindCSS, ChakraUI & Morphing Gradient Background](./devlog/nextjs-vercel-portfolio-redesign-with-tailwindcss-chakraui-and-morphing-gradient-background.md)
+
+---
 # Rust Articles
 - [Experimenting With Rust](./experimenting-with-rust.md)
 - [Power of Rust in the palm of my Discord Server](./serenity.md)

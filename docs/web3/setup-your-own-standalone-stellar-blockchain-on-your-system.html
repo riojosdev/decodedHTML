@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js ayu">
+<html lang="en" class="ayu" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
@@ -36,7 +36,7 @@
 
         <meta name="description" content="We help the programmer in you to code better, faster, cleaner. We contain the best practices every programmer should follow. You may also find occasional Rust articles here. Also, HTML is not a real programming language!">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#ffffff" />
+        <meta name="theme-color" content="#ffffff">
 
         <link rel="icon" href="../favicon.svg">
         <link rel="shortcut icon" href="../favicon.png">
@@ -56,7 +56,8 @@
         <!-- Custom theme stylesheets -->
 
     </head>
-    <body>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
         <!-- Provide site root to javascript -->
         <script>
             var path_to_root = "../";
@@ -85,40 +86,71 @@
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
             var html = document.querySelector('html');
-            html.classList.remove('no-js')
             html.classList.remove('ayu')
             html.classList.add(theme);
-            html.classList.add('js');
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
         </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
 
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
-            var html = document.querySelector('html');
-            var sidebar = 'hidden';
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
-            html.classList.remove('sidebar-visible');
-            html.classList.add("sidebar-" + sidebar);
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../about.html">About Me</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Web3</li><li class="chapter-item expanded "><a href="../web3/setup-your-own-standalone-stellar-blockchain-on-your-system.html" class="active">Setup your own Standalone/Local Stellar Blockchain to test Smart Contracts & dApps</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Content Creation</li><li class="chapter-item expanded "><a href="../content-creation/dealing-with-content-sharks.html">How to Deal with Content Sharks</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Rust Articles</li><li class="chapter-item expanded "><a href="../experimenting-with-rust.html">Experimenting With Rust</a></li><li class="chapter-item expanded "><a href="../serenity.html">Power of Rust in the palm of my Discord Server</a></li><li class="chapter-item expanded "><a href="../why-i-choose-rust.html">Why I choose Rust</a></li><li class="chapter-item expanded "><a href="../lunarvim-for-rustaceans.html">Setting up Lunarvim for Rust DevOps</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Best Practices for Programmers</li><li class="chapter-item expanded "><a href="../remove-console-logs-in-production.html">Remove console.logs in Production</a></li><li class="chapter-item expanded "><a href="../protecting-reducing-eye-strain-programmers.html">Reducing & Protecting from Eye Strain for Programmers</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Personal Blabs</li><li class="chapter-item expanded "><a href="../decoding-html-is-not-a-crime.html">Decoding HTML is not a Crime</a></li><li class="chapter-item expanded "><a href="../useless-opensource-contributions.html">My not-really-useless opensource contributions</a></li><li class="chapter-item expanded "><a href="../normalize-inclusive-language.html">Normalize use of Inclusive Language</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../about.html">About Me</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Web3</li><li class="chapter-item expanded "><a href="../web3/setup-your-own-standalone-stellar-blockchain-on-your-system.html" class="active">Setup your own Standalone/Local Stellar Blockchain to test Smart Contracts & dApps</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Content Creation</li><li class="chapter-item expanded "><a href="../content-creation/dealing-with-content-sharks.html">How to Deal with Content Sharks</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">DevLog</li><li class="chapter-item expanded "><a href="../devlog/nextjs-vercel-portfolio-redesign-with-tailwindcss-chakraui-and-morphing-gradient-background.html">NEXTJS Portfolio Redesign with TailwindCSS, ChakraUI & Morphing Gradient Background</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Rust Articles</li><li class="chapter-item expanded "><a href="../experimenting-with-rust.html">Experimenting With Rust</a></li><li class="chapter-item expanded "><a href="../serenity.html">Power of Rust in the palm of my Discord Server</a></li><li class="chapter-item expanded "><a href="../why-i-choose-rust.html">Why I choose Rust</a></li><li class="chapter-item expanded "><a href="../lunarvim-for-rustaceans.html">Setting up Lunarvim for Rust DevOps</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Best Practices for Programmers</li><li class="chapter-item expanded "><a href="../remove-console-logs-in-production.html">Remove console.logs in Production</a></li><li class="chapter-item expanded "><a href="../protecting-reducing-eye-strain-programmers.html">Reducing & Protecting from Eye Strain for Programmers</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Personal Blabs</li><li class="chapter-item expanded "><a href="../decoding-html-is-not-a-crime.html">Decoding HTML is not a Crime</a></li><li class="chapter-item expanded "><a href="../useless-opensource-contributions.html">My not-really-useless opensource contributions</a></li><li class="chapter-item expanded "><a href="../normalize-inclusive-language.html">Normalize use of Inclusive Language</a></li></ol>
             </div>
-            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
         </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
 
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
                                 <div id="menu-bar-hover-placeholder"></div>
-                <div id="menu-bar" class="menu-bar sticky bordered">
+                <div id="menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
-                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
                             <i class="fa fa-bars"></i>
-                        </button>
+                        </label>
                         <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
                             <i class="fa fa-paint-brush"></i>
                         </button>
@@ -174,7 +206,7 @@
 </blockquote>
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Sa6P1GE7aoE?si=ZdgBEjqJnVZXbYfp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <h2 id="why-run-your-own-standalonelocal-stellar-blockchain"><a class="header" href="#why-run-your-own-standalonelocal-stellar-blockchain">Why run your own Standalone/local Stellar Blockchain</a></h2>
-<p>Once in while we try to test funny messages, just to see how it would look like. During development we often type in different embarassing/funny statements to have a fun at it. We crash a lot when we hack. Often times the users would able to experience this. And might come up to the conclusion that we are just playing with the dApp, and are not dedicated to provide a dedicated service. </p>
+<p>Once in while we try to test funny messages, just to see how it would look like. During development we often type in different embarassing/funny statements to have a fun at it. We crash a lot when we hack. Often times the users would able to experience this. And might come up to the conclusion that we are just playing with the dApp, and are not dedicated to provide a dedicated service.</p>
 <p id="meta_descriptionz">Aren't you tired of different embarassing mistakes people might see when you are developing the blockchain. With this tutorial you can have your own blockchain setup!</p> 
 <p>Where you're able to experiment with different styles of smart contracts and test them without fearing the public eyes. So, let's get started shall we?</p>
 <h2 id="setting-up-your-development-environment"><a class="header" href="#setting-up-your-development-environment">Setting up your development environment</a></h2>
@@ -185,7 +217,7 @@
 <pre><code class="language-bash">curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 </code></pre>
 <h4 id="windows"><a class="header" href="#windows">Windows</a></h4>
-<p>For Windows devices, you can download the <a href="https://static.rust-lang.org/rustup/dist/i686-pc-windows-gnu/rustup-init.exe">rustup-init executable from rust-lang.org</a> and follow the instruction to proceed with installing it. </p>
+<p>For Windows devices, you can download the <a href="https://static.rust-lang.org/rustup/dist/i686-pc-windows-gnu/rustup-init.exe">rustup-init executable from rust-lang.org</a> and follow the instruction to proceed with installing it.</p>
 <blockquote>
 <p>Note: If you are using WSL or WSL2, you can follow the instructions for Linux, to install Rust</p>
 </blockquote>
@@ -236,7 +268,7 @@ cargo binstall -y stellar-cli
 <p>You can use the <a href="https://hub.docker.com/r/stellar/quickstart">Stellar Quickstart Docker image</a> to run your own instance of Stellar. You can follow the instructions in the <a href="https://github.com/stellar/quickstart">readme to learn more about the quickstart image</a>.</p>
 <p>We will be using the testing tagged image for our development environment.</p>
 <ul>
-<li>Start Docker &amp; run 
+<li>Start Docker &amp; run
 <pre><code class="language-bash">docker run --rm -it \
   -p 8000:8000 \
   --name stellar \
@@ -246,7 +278,7 @@ cargo binstall -y stellar-cli
 </code></pre>
 This will start a quickstart container of Stellar blockchain instance and display the status logs of the standalone blockchain instance. You will also see information about the Public and Private keys. Take a note of them, as we will be needing them later on.</li>
 <li>You can check the status of the instance, by querying the Horizon API like so:
-<pre><code class="language-bash">curl &quot;http://localhost:8000&quot;
+<pre><code class="language-bash">curl "http://localhost:8000"
 </code></pre>
 you can also use your browser, if you prefer your browser over curl.</li>
 </ul>
@@ -255,8 +287,8 @@ you can also use your browser, if you prefer your browser over curl.</li>
 <ul>
 <li>Add a network and define the RPC URL &amp; the network passphrase
 <pre><code class="language-bash">stellar network add local \
-  --rpc-url http://localhost:8000/soroban/rpc&quot; \
-  --network-passphrase &quot;Standalone Network ; February 2017&quot;
+  --rpc-url http://localhost:8000/soroban/rpc" \
+  --network-passphrase "Standalone Network ; February 2017"
 </code></pre>
 This will create a <code>/.soroban/network</code> directory in our root directory we are currently in, with our network configuration we just defined.</li>
 <li>Next, we need to create an identity we would be using, to deploy the Smart contract onto our blockchain instance. Run the following to create an identity called <code>alice</code> for our network.
@@ -289,16 +321,16 @@ Stellar CLI would generate an identity inside the <code>.soroban/identity</code>
 <pre><code class="language-bash">cp contracts/.env.example contracts/.env
 </code></pre>
 </li>
-<li>Copy &amp; paste the <code>ADMIN_SECRET_KEY</code> to .env file. You can find them in the standalone blockchain container logs, we ran using the docker container stellar/quickstart:testing. It is a key that starts with <code>S</code>. </li>
+<li>Copy &amp; paste the <code>ADMIN_SECRET_KEY</code> to .env file. You can find them in the standalone blockchain container logs, we ran using the docker container stellar/quickstart:testing. It is a key that starts with <code>S</code>.</li>
 <li>And for the <code>MAINNET_RPC_URL</code> give the following
 <pre><code>localhost:8000/soroban/rpc
 </code></pre>
 The final <code>.env</code> file contents should look like the following
 <pre><code># Stellar accounts Secret Keys
-ADMIN_SECRET_KEY=&quot;SC5O7VZUXDJ6JBDSZ74DSERXL7W3Y5LTOAMRF7RQRL3TAGAPS7LUVG3L&quot;
+ADMIN_SECRET_KEY="SC5O7VZUXDJ6JBDSZ74DSERXL7W3Y5LTOAMRF7RQRL3TAGAPS7LUVG3L"
 
 # RPC Setup
-MAINNET_RPC_URL=&quot;localhost:8000/soroban/rpc&quot;
+MAINNET_RPC_URL="localhost:8000/soroban/rpc"
 </code></pre>
 </li>
 </ul>
@@ -331,14 +363,14 @@ yarn build
 <p>In the <code>contracts</code> folder, you'll find <code>deployment.json</code> file</p>
 <pre><code>[
 {
-    &quot;contractId&quot;: &quot;greeting&quot;,
-    &quot;networkPassphrase&quot;: &quot;Standalone Network ; February 2017&quot;,
-    &quot;contractAddress&quot;: &quot;CAQLKKFSEOJF0932JGVF43NVCI3JDJKLEFFJSEJFLSEJFJ09233LKKFJJ&quot;
+    "contractId": "greeting",
+    "networkPassphrase": "Standalone Network ; February 2017",
+    "contractAddress": "CAQLKKFSEOJF0932JGVF43NVCI3JDJKLEFFJSEJFLSEJFJ09233LKKFJJ"
 },
 {
-    &quot;contractId&quot;: &quot;greeting&quot;,
-    &quot;networkPassphrase&quot;: &quot;Test SDF Network ; September 2015&quot;,
-    &quot;contractAddress&quot;: &quot;CDJOI4JFJ3FJDMX3I4HFJ4WF9JAVPIHLEKJ4GDNL34HGFHELKG90JKLSH&quot;
+    "contractId": "greeting",
+    "networkPassphrase": "Test SDF Network ; September 2015",
+    "contractAddress": "CDJOI4JFJ3FJDMX3I4HFJ4WF9JAVPIHLEKJ4GDNL34HGFHELKG90JKLSH"
 }
 </code></pre>
 <p>Replace the contract address of the Standalone Network, with the contract address you have received during the deployment.</p>
@@ -377,7 +409,7 @@ yarn build
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next" href="../content-creation/dealing-with-content-sharks.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../content-creation/dealing-with-content-sharks.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -391,7 +423,7 @@ yarn build
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../content-creation/dealing-with-content-sharks.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../content-creation/dealing-with-content-sharks.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
@@ -433,5 +465,6 @@ yarn build
         <!-- Custom JS scripts -->
 
 
+    </div>
     </body>
 </html>

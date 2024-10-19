@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js ayu">
+<html lang="en" class="ayu" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
@@ -36,7 +36,7 @@
 
         <meta name="description" content="We help the programmer in you to code better, faster, cleaner. We contain the best practices every programmer should follow. You may also find occasional Rust articles here. Also, HTML is not a real programming language!">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#ffffff" />
+        <meta name="theme-color" content="#ffffff">
 
         <link rel="icon" href="favicon.svg">
         <link rel="shortcut icon" href="favicon.png">
@@ -56,7 +56,8 @@
         <!-- Custom theme stylesheets -->
 
     </head>
-    <body>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
         <!-- Provide site root to javascript -->
         <script>
             var path_to_root = "";
@@ -85,40 +86,71 @@
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
             var html = document.querySelector('html');
-            html.classList.remove('no-js')
             html.classList.remove('ayu')
             html.classList.add(theme);
-            html.classList.add('js');
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
         </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
 
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
-            var html = document.querySelector('html');
-            var sidebar = 'hidden';
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
-            html.classList.remove('sidebar-visible');
-            html.classList.add("sidebar-" + sidebar);
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="about.html">About Me</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Web3</li><li class="chapter-item expanded "><a href="web3/setup-your-own-standalone-stellar-blockchain-on-your-system.html">Setup your own Standalone/Local Stellar Blockchain to test Smart Contracts & dApps</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Content Creation</li><li class="chapter-item expanded "><a href="content-creation/dealing-with-content-sharks.html">How to Deal with Content Sharks</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Rust Articles</li><li class="chapter-item expanded "><a href="experimenting-with-rust.html" class="active">Experimenting With Rust</a></li><li class="chapter-item expanded "><a href="serenity.html">Power of Rust in the palm of my Discord Server</a></li><li class="chapter-item expanded "><a href="why-i-choose-rust.html">Why I choose Rust</a></li><li class="chapter-item expanded "><a href="lunarvim-for-rustaceans.html">Setting up Lunarvim for Rust DevOps</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Best Practices for Programmers</li><li class="chapter-item expanded "><a href="remove-console-logs-in-production.html">Remove console.logs in Production</a></li><li class="chapter-item expanded "><a href="protecting-reducing-eye-strain-programmers.html">Reducing & Protecting from Eye Strain for Programmers</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Personal Blabs</li><li class="chapter-item expanded "><a href="decoding-html-is-not-a-crime.html">Decoding HTML is not a Crime</a></li><li class="chapter-item expanded "><a href="useless-opensource-contributions.html">My not-really-useless opensource contributions</a></li><li class="chapter-item expanded "><a href="normalize-inclusive-language.html">Normalize use of Inclusive Language</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="about.html">About Me</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Web3</li><li class="chapter-item expanded "><a href="web3/setup-your-own-standalone-stellar-blockchain-on-your-system.html">Setup your own Standalone/Local Stellar Blockchain to test Smart Contracts & dApps</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Content Creation</li><li class="chapter-item expanded "><a href="content-creation/dealing-with-content-sharks.html">How to Deal with Content Sharks</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">DevLog</li><li class="chapter-item expanded "><a href="devlog/nextjs-vercel-portfolio-redesign-with-tailwindcss-chakraui-and-morphing-gradient-background.html">NEXTJS Portfolio Redesign with TailwindCSS, ChakraUI & Morphing Gradient Background</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Rust Articles</li><li class="chapter-item expanded "><a href="experimenting-with-rust.html" class="active">Experimenting With Rust</a></li><li class="chapter-item expanded "><a href="serenity.html">Power of Rust in the palm of my Discord Server</a></li><li class="chapter-item expanded "><a href="why-i-choose-rust.html">Why I choose Rust</a></li><li class="chapter-item expanded "><a href="lunarvim-for-rustaceans.html">Setting up Lunarvim for Rust DevOps</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Best Practices for Programmers</li><li class="chapter-item expanded "><a href="remove-console-logs-in-production.html">Remove console.logs in Production</a></li><li class="chapter-item expanded "><a href="protecting-reducing-eye-strain-programmers.html">Reducing & Protecting from Eye Strain for Programmers</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Personal Blabs</li><li class="chapter-item expanded "><a href="decoding-html-is-not-a-crime.html">Decoding HTML is not a Crime</a></li><li class="chapter-item expanded "><a href="useless-opensource-contributions.html">My not-really-useless opensource contributions</a></li><li class="chapter-item expanded "><a href="normalize-inclusive-language.html">Normalize use of Inclusive Language</a></li></ol>
             </div>
-            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
         </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
 
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
                                 <div id="menu-bar-hover-placeholder"></div>
-                <div id="menu-bar" class="menu-bar sticky bordered">
+                <div id="menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
-                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
                             <i class="fa fa-bars"></i>
-                        </button>
+                        </label>
                         <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
                             <i class="fa fa-paint-brush"></i>
                         </button>
@@ -165,24 +197,24 @@
                     <main>
                         <h1 id="experimenting-with-rust"><a class="header" href="#experimenting-with-rust">Experimenting With Rust</a></h1>
 <blockquote>
-<p>First of all, I feel like just mentioning the word &quot;Rust&quot; could cause confusion. I always type as Rust Lang or The Rust Programming Language, whenever I had to mention it. But it seems rather, unnecessary. Atleast my domain name &quot;decodedHTML.com&quot; could be a clue pointing Rust in the right direction. :P</p>
+<p>First of all, I feel like just mentioning the word "Rust" could cause confusion. I always type as Rust Lang or The Rust Programming Language, whenever I had to mention it. But it seems rather, unnecessary. Atleast my domain name "decodedHTML.com" could be a clue pointing Rust in the right direction. :P</p>
 </blockquote>
 <p>I finished The Rust Book. Now what? Tried building a simple REST API using Rocket, Diesel and Serde. Feels like I am missing a lot of steps. So had to build my own project.</p>
 <p>My first official Rust project was a substitution cipher generator. It was taught in CS50 using the C language. I loved the cryptographic algorithm that, I recreated it in Rust. <a href="https://github.com/riojosdev/cipherio">Link to Cipherio Repo.</a> It is CLI application that just does one thing perfectly. Cipher a text!</p>
 <p>Recently I tried building a accounting program. In this I started to build everything from scratch. (I know its a bad idea; to reinvent the wheel) But I haven't had much experience in systems programming. This could teach me a lot. After all I am understanding a lot. I am constantly referring my degree textbooks to understand different archetecture and practices. I even have my own personal resources goldmine, which I have bookmarked over the years (not that long though).</p>
-<p>In this program I started by making a simple data structure to handle a user, then figured I need to store it in some long term memory, rather than the CPU memory for doing all the extensive tasks. So my first thought was to integrate a database into it. But I wanted to explore the beautiful capabilities of Rust. So right now built a json file to store the user dataset. By doing so, I just learned the steps required to read and write local files. </p>
-<p>During my development I found out that I didn't feel confident in structuring my program. I'm jumping back and forth between the reference for packages, crates and modules in the Rust Book. There are main, lib and other modules. My current plan to structure the program goes like this. Create just the basic controls in <code>main</code> file. Create the widely used data structures and algorithms used by the program in <code>lib</code>. And create and group the data structures and algorithms that can be used in other programs as <code>modules</code>. Also a json server would be storing data in an order. So to implement the best search algorithm we need to make the dataset sorted. Rust has a <code>sort_by</code> function just for sorting. So no need to implement a seperate sorting algorithm. Also I tried creating one but I was stuck at implementing a &quot;not-a-reference&quot;.</p>
+<p>In this program I started by making a simple data structure to handle a user, then figured I need to store it in some long term memory, rather than the CPU memory for doing all the extensive tasks. So my first thought was to integrate a database into it. But I wanted to explore the beautiful capabilities of Rust. So right now built a json file to store the user dataset. By doing so, I just learned the steps required to read and write local files.</p>
+<p>During my development I found out that I didn't feel confident in structuring my program. I'm jumping back and forth between the reference for packages, crates and modules in the Rust Book. There are main, lib and other modules. My current plan to structure the program goes like this. Create just the basic controls in <code>main</code> file. Create the widely used data structures and algorithms used by the program in <code>lib</code>. And create and group the data structures and algorithms that can be used in other programs as <code>modules</code>. Also a json server would be storing data in an order. So to implement the best search algorithm we need to make the dataset sorted. Rust has a <code>sort_by</code> function just for sorting. So no need to implement a seperate sorting algorithm. Also I tried creating one but I was stuck at implementing a "not-a-reference".</p>
 <p>Rust language would be rewriting the algorithms... Which could be a better memory efficient algorithm. A world where memory is not wasted, much! I remember when I was working with JavaScript I had to implement one of the worst program logic, as said by my senior developer. I argued that I haven't completed the logic. Rust eliminates any more such situations. It won't even compile if I/you did something bad. It really helps you to work on perfecting your algorithm. Less wasted memory is what we needed all along.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="content-creation/dealing-with-content-sharks.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="devlog/nextjs-vercel-portfolio-redesign-with-tailwindcss-chakraui-and-morphing-gradient-background.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next" href="serenity.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="serenity.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -192,11 +224,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="content-creation/dealing-with-content-sharks.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="devlog/nextjs-vercel-portfolio-redesign-with-tailwindcss-chakraui-and-morphing-gradient-background.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="serenity.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="serenity.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
@@ -238,5 +270,6 @@
         <!-- Custom JS scripts -->
 
 
+    </div>
     </body>
 </html>

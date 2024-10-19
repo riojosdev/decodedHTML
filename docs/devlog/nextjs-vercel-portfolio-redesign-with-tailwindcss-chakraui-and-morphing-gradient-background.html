@@ -1,0 +1,297 @@
+<!DOCTYPE HTML>
+<html lang="en" class="ayu" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>NEXTJS Portfolio Redesign with TailwindCSS, ChakraUI &amp; Morphing Gradient Background - 🦀 decodedHTML 🦀</title>
+
+
+        <!-- Custom HTML head -->
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y7D01T30H4"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'G-Y7D01T30H4');
+        </script>
+        
+<meta property="og:type" content="article">
+        <meta property="article:author" content="https://riojos.in/">
+        <meta property="article:publisher" content="https://riojos.in/">
+        <meta property="og:url">
+<meta property="og:description" content="We help the programmer in you to code better, faster, cleaner. We contain the best practices every programmer should follow. You may also find occasional Rust articles here. Also, HTML is not a real programming language!">
+        <meta property="og:title" content="NEXTJS Portfolio Redesign with TailwindCSS, ChakraUI &amp; Morphing Gradient Background - 🦀 decodedHTML 🦀">
+        <meta property="og:image" content="https://decodedhtml.com/images/preview.png">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:image:type" content="image/png">
+        
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url">
+        <meta property="twitter:description" content="We help the programmer in you to code better, faster, cleaner. We contain the best practices every programmer should follow. You may also find occasional Rust articles here. Also, HTML is not a real programming language!">
+        <meta property="twitter:image" content="https://decodedhtml.com/images/preview.png">
+        <meta property="twitter:title" content="NEXTJS Portfolio Redesign with TailwindCSS, ChakraUI &amp; Morphing Gradient Background - 🦀 decodedHTML 🦀">
+
+        <meta name="description" content="We help the programmer in you to code better, faster, cleaner. We contain the best practices every programmer should follow. You may also find occasional Rust articles here. Also, HTML is not a real programming language!">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "ayu" : "ayu";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('ayu')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../about.html">About Me</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Web3</li><li class="chapter-item expanded "><a href="../web3/setup-your-own-standalone-stellar-blockchain-on-your-system.html">Setup your own Standalone/Local Stellar Blockchain to test Smart Contracts & dApps</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Content Creation</li><li class="chapter-item expanded "><a href="../content-creation/dealing-with-content-sharks.html">How to Deal with Content Sharks</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">DevLog</li><li class="chapter-item expanded "><a href="../devlog/nextjs-vercel-portfolio-redesign-with-tailwindcss-chakraui-and-morphing-gradient-background.html" class="active">NEXTJS Portfolio Redesign with TailwindCSS, ChakraUI & Morphing Gradient Background</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Rust Articles</li><li class="chapter-item expanded "><a href="../experimenting-with-rust.html">Experimenting With Rust</a></li><li class="chapter-item expanded "><a href="../serenity.html">Power of Rust in the palm of my Discord Server</a></li><li class="chapter-item expanded "><a href="../why-i-choose-rust.html">Why I choose Rust</a></li><li class="chapter-item expanded "><a href="../lunarvim-for-rustaceans.html">Setting up Lunarvim for Rust DevOps</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Best Practices for Programmers</li><li class="chapter-item expanded "><a href="../remove-console-logs-in-production.html">Remove console.logs in Production</a></li><li class="chapter-item expanded "><a href="../protecting-reducing-eye-strain-programmers.html">Reducing & Protecting from Eye Strain for Programmers</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Personal Blabs</li><li class="chapter-item expanded "><a href="../decoding-html-is-not-a-crime.html">Decoding HTML is not a Crime</a></li><li class="chapter-item expanded "><a href="../useless-opensource-contributions.html">My not-really-useless opensource contributions</a></li><li class="chapter-item expanded "><a href="../normalize-inclusive-language.html">Normalize use of Inclusive Language</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">🦀 decodedHTML 🦀</h1>
+
+                    <div class="right-buttons">
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="portfolio-redesigned-using-nextjs-with-tailwindcss-chakraui--a-morphing-gradient-background"><a class="header" href="#portfolio-redesigned-using-nextjs-with-tailwindcss-chakraui--a-morphing-gradient-background">Portfolio Redesigned using NEXT.JS with TailwindCSS, ChakraUI &amp; a Morphing Gradient Background</a></h1>
+<img src="./../images/riojos-portfolio-home-webpage-redesign.png" id="meta_imgz">
+<p>So, just wanted to prepare a devlog about my redesign of my portfolio website.</p>
+<p id="meta_descriptionz">Here we go into the behind scenes of how I redesigned my web-app development & graphic design freelance portfolio webpage riojos.in, built using NEXT.JS, TailwindCSS, ChakraUI & a Morphing Gradient Background by WeCoded's Youtube Tutorial. I deployed the final webpage on Vercel! Let's go into more depth on the development.</p>
+<p>My decision for the redesign started when I wanted a page for to showcase my projects. My previous design I had just a UI with some simple HTML div elements, CSS &amp; <a href="https://gsap.com/">GSAP</a> to animate a section where latest updates would be shown. Unfortunately that component went under developed as I didn't have any cool/fully finished projects to show on my portfolio. I thought to show some blogs I written here. But that would've meant I would be skipping my opportunity to develop some projects to showcase my skills. So particpated in a hackathon to get that pressure to build &amp; ship fast. Some developers work well under pressure, like me. Not good behaviour, I know. But I usually get distracted. In this era aren't we all living in the attention driven economy. And we all do experience ADHD from time to time I guess. Some cope well better than others.</p>
+<p>The plan to improve heavily on the frontend design &amp; development was to promote my NPM library Jaggery.</p>
+<h2 id="the-frontend-components"><a class="header" href="#the-frontend-components">The Frontend Components</a></h2>
+<h3 id="navbar"><a class="header" href="#navbar">NavBar</a></h3>
+<img src="./../images/navbar-component-from-jaggery-library-transparent-background-with-glowing-link-on-hover.png" alt="">
+<p>The NavBar component is primarily built to support to be imported into a create-react-app project. I built this component and published it onto my <a href="https://www.npmjs.com/package/jaggery">NPM Jaggery Library</a>. I had some issues on getting it directly imported into the NextJS portfolio project. But as I wanted to implement the portfolio first. I tried extracting the component and implementing it directly onto the NEXT.js project.</p>
+<h3 id="morphing-gradient-background---by-wecodeds-youtube-tutorial"><a class="header" href="#morphing-gradient-background---by-wecodeds-youtube-tutorial">Morphing Gradient Background - by WeCoded's YouTube Tutorial</a></h3>
+<p>The main attractiveness to my portfolio is from this <a href="https://www.youtube.com/watch?v=Ml-B-W91gtw">background interactive Morphing Gradient animation tutorial by WeCoded's YouTube Channel</a>. On his tutorial I learned about how you can apply shaders using HTML SVG elements. I immediately got hooked on it. And since it looked really well on my portfolio, I want to do more research on it &amp; also share with you guys. So my plan is to prepare a course on XR (AR/VR/MR) &amp; to start with the HTML SVG element. So, will be soon posting a link about it. Make sure to follow me on any socials you can find on my portfolio page to stay updated on when it would be available.</p>
+<h3 id="scroll-progress-circular-tracker"><a class="header" href="#scroll-progress-circular-tracker">Scroll Progress Circular Tracker</a></h3>
+<img src="./../images/scroll-circular-progress-tracker-with-transparent-background.png">
+<p>The idea for a scroll tracker was inspired by my friend's blog page. I used <a href="https://v2.chakra-ui.com/">ChakraUI</a> to implement the progress track design. Added a custom CSS on top of ChakraUI's component, as I had some issues in getting my desired CSS Style to be applied on the component.</p>
+<h3 id="card-container-components"><a class="header" href="#card-container-components">Card Container Components</a></h3>
+<img src="./../images/transparent-designed-card-layout-by-chakraui-and-container-component-using-tailwindcss.png">
+<p>The different card container components are used to represent a section. Which was built &amp; stylized using <a href="https://tailwindcss.com/">TailwindCSS</a> &amp; <a href="https://v2.chakra-ui.com/">ChakraUI</a>. Additional CSS styling were added on top of ChakraUI to math the whole theme of the Portfolio page.</p>
+<h2 id="the-pages"><a class="header" href="#the-pages">The Pages</a></h2>
+<h3 id="about"><a class="header" href="#about">About</a></h3>
+<p>The about page has a bried description about my journey into freelancing. How I started programming. What are my main motivations, lessons &amp; things like that. Do give a read to get to know more about me.</p>
+<h3 id="projects"><a class="header" href="#projects">Projects</a></h3>
+<p>My own ideas that I tried to get my hands dirty. It shows what I really would do. And what all I have learned. The opportunities of each project is different. It gives you an idea, of what is possible with me included in your team. And what my project is able to do. Don't let the projects go unseen, as they have immense potential to create a big dent in this tiny blue planet. But to take it forward, you would need to love dirt.</p>
+<h3 id="services"><a class="header" href="#services">Services</a></h3>
+<p>The most services requested from me. These are not my only capablities, I can provide, but since these are the most often contacted me. I added it a place where you can reach out to me easily. Describing more would just mean, I would be forcing my ideas on to you. We all live in &amp; come from different dirt on this planet, no?</p>
+<h2 id="server-actions--middlewares"><a class="header" href="#server-actions--middlewares">Server Actions &amp; Middlewares</a></h2>
+<p>Postgres Storage on Vercel powered by NeonDB
+I used PostgreSQL as the database by following the <a href="https://vercel.com/docs/storage/vercel-postgres/sdk">Vercel Postgres Storage quickstart</a>. Vercel let me have an easy to use dashboard to be able to monitor postgres data. I used it for the enquiry form on my portfolio.</p>
+<h2 id="nextjs-redirect"><a class="header" href="#nextjs-redirect">NextJS Redirect</a></h2>
+<p>The NEXT.js config file had an option to make a redirect towards an address. I wanted to use it for having an fancy human readable url format, rather than something that was too long to even be visible in the browser address bar. The shorter URLs makes it more memorable. So loved that NEXT.js offered it directly on it's config.</p>
+<p>But before getting to know the option of redirect from the NEXT.js config, I tried implementing a server action to redirect the page. So that I may be able to display a loading animation that the user was being redirected towards an external link. If I could've been able to implement that, I could've used the meta tags and log the visit direct on my NEXT.js portfolio.</p>
+<p>I don't know if this is not possible or not, but the data couldn't be SELECTed and received on the client component. The redirect function was defined in the client component inside an useEffect hook. So I wanted my data to reach the function call inside useEffect. But the SQL query as it is always async it returned a promise. And it was not possible to get the value of the promise. I was hacking my mights off on this.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../content-creation/dealing-with-content-sharks.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../experimenting-with-rust.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../content-creation/dealing-with-content-sharks.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../experimenting-with-rust.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
