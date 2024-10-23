@@ -4,7 +4,7 @@
 
 So, just wanted to prepare a devlog about my redesign of my portfolio website.
 
-**<p id="meta_descriptionz">Let's go into the behind scenes of how I redesigned my web-app development & graphic design webpage, riojos.in. Built using NEXT.JS, TailwindCSS, ChakraUI & a Morphing Gradient Background by WeCoded's Youtube Tutorial. I deployed the final webpage on Vercel! Let's go into more depth on the development.</p>**
+**<p id="meta_descriptionz">Let's go into the behind scenes of how I redesigned my web-app development & graphic design webpage, riojos.in. Built using NEXT.JS 14.2.13, TailwindCSS, ChakraUI & a Morphing Gradient Background by WeCoded's Youtube Tutorial. I deployed the final webpage on Vercel! Let's go into more depth on the development.</p>**
 
 ## A Constant Frontend Framework for A Consistent Portfolio Progression
 My decision for the redesign started when I wanted a page to showcase my projects & also to represent my tech journey.
