@@ -1,5 +1,6 @@
 # Summary
 [About Me](./about.md)
+[AI Usage](./ai.md)
 
 ---
 # Web3
