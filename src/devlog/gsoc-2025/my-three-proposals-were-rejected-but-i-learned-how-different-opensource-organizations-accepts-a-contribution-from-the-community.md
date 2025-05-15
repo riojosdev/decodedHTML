@@ -121,11 +121,7 @@ I was familiar with the tools, and me being able to know more about their impact
 * #### Having the prerequisites setup, learning prerequisites basics & following through the setup guide in the docs
     <img src="./../../images/open-healthcare-care-application-development-environment-on-laptop.jpg" id="meta_imgz" alt="image showing laptop with open healthcare's care application development environment being run is shown">
 
-    Setting up OHC's CARE application was a bit hard. As the documentation was a bit disorganized, it made it harder to go back and forth the documentation during the local setup.
-
-    I installed and ran CARE backend application on WSL with docker, and ran the frontend on my normal windows machine. This was already consuming a lot of RAM, by the docker VM on top of WSL, and the processes running inside the VMs for the applicaion. And on top of that I had to use the browser, and the IDE (thankfully I was not using VS Code, IMO it uses a lot of memory when compared to vim/neovim). These consumed a lot of my RAM. But I was able to manage it, I just have to not run another memory heavy process.
-
-    I was already familiar with React, but Django - I had never fully did a project in it. I followed the Django documentation to build a simple application, to get familiar with Django architecture. Once I did that I started figuring out how the structure was different to a simple django application. Since this was a large project, it had more complex architecture. It was exciting to compare and learn about the architectural decision made to build and maintain OHC's CARE app.
+    Setting up OHC's CARE application was a bit hard. I was already familiar with React, but Django - I had never fully did a project in it. I followed the Django documentation to build a simple application, to get familiar with Django architecture. Once I did that I started figuring out how the structure was different to a simple django application. Since this was a large project, it had more complex architecture. It was exciting to compare and learn about the architectural decision made to build and maintain OHC's CARE app.
 
 * #### Finding an Issue
     Honestly, I had trouble finding an unassigned issue. A lot of the issues that I had the confidence that I could solve, were already assigned. 
