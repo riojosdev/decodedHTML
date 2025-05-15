@@ -121,7 +121,7 @@ I was familiar with the tools, and me being able to know more about their impact
 * #### Having the prerequisites setup, learning prerequisites basics & following through the setup guide in the docs
     <img src="./../../images/open-healthcare-care-application-development-environment-on-laptop.jpg" id="meta_imgz" alt="image showing laptop with open healthcare's care application development environment being run is shown">
 
-    Setting up OHC's CARE application was a bit hard. I was already familiar with React, but Django - I had never fully did a project in it. I followed the Django documentation to build a simple application, to get familiar with Django architecture. Once I did that I started figuring out how the structure was different to a simple django application. Since this was a large project, it had more complex architecture. It was exciting to compare and learn about the architectural decision made to build and maintain OHC's CARE app.
+    Setting up OHC's CARE application was a bit hard. I was already familiar with React, but Django - I had never fully did a project in it. I followed the Django documentation to build a simple application, to get familiar with Django architecture. Once I did that I tried following the CARE's getting started. Setting up the backend, frontend and some of the plugins. I started figuring out how the structure was different to a simple django application. Since this was a large project, it had more complex architecture. It was exciting to compare and learn about the architectural decision made to build and maintain OHC's CARE app.
 
 * #### Finding an Issue
     Honestly, I had trouble finding an unassigned issue. A lot of the issues that I had the confidence that I could solve, were already assigned. 
