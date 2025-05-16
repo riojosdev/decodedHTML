@@ -37,6 +37,23 @@ document.onreadystatechange = function () {
   let url_metatag_twitter = document.querySelectorAll('meta[property = "twitter:url"]')[0];
   url_metatag.content = meta_urlz;
   url_metatag_twitter.content = meta_urlz;
+
+
+  if (document.getElementById("content")) {
+    if (document.getElementById("content").getElementsByTagName("main")[0]) {
+      if (!document.getElementById("content").getElementsByTagName("main")[0].getElementsByClassName("utterances")[0]) {
+        const scriptTag = document.createElement("script");
+        scriptTag.setAttribute("src", "https://utteranc.es/client.js");
+        scriptTag.setAttribute("repo", "riojosdev/decodedhtml");
+        scriptTag.setAttribute("issue-term", "pathname");
+        scriptTag.setAttribute("theme", "icy-dark");
+        scriptTag.setAttribute("crossorigin", "anonymous");
+
+        document.getElementById("content").getElementsByTagName("main")[0].appendChild(scriptTag);
+      }
+    }
+  }
+
 }
 
 // Global variable, shared between modules
