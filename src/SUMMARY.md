@@ -3,6 +3,10 @@
 [AI Usage](./ai.md)
 
 ---
+# VFX
+- [Mollywood Film Anomie uses Sound Particles for their Sound Production](./vfx/south-indian-malayalam-film-anomie-uses-sound-particles.md)
+
+---
 # Web3
 - [Setup your own Standalone/Local Stellar Blockchain to test Smart Contracts & dApps](./web3/setup-your-own-standalone-stellar-blockchain-on-your-system.md)
 
