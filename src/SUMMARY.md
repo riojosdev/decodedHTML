@@ -5,6 +5,7 @@
 ---
 # VFX
 - [Mollywood Film Anomie uses Sound Particles for their Sound Production](./vfx/south-indian-malayalam-film-anomie-uses-sound-particles.md)
+- [Animations](./vfx/animations-out-there.md)
 
 ---
 # Web3
