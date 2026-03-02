@@ -88,6 +88,48 @@ our initial edl and otio files was not able to be imported.
 But we were able to import CSV files
 
 ---
+---
+
+shots
+sequence
+episode
+edits
+
+---
+
+Episode
+|
+L* edits
+    |
+    L* 
+
+---
+
+shots -> example, if `storyboard` task status is not done, it means it dont have a place in the render, and it is being blocked from graduating to receive the tasks that comes after `storyboard`
+         once the storyboard task is marked done, then other tasks can be worked on it. 
+         in the end, when all the tasks are done, it can be compiled into the next stage, whether that be arranging it into the final sequence or an edit.
+
+## How is this useful..?
+We dont need to always load up an entire sequence, ie, a collection of multiple individual shots arranged in the timeline. just to make a small edit for a part of it.
+Focus can be given to individual shots, and modify to improve the experience of it.
+
+## 
+
+Do not think about
+* doing all the tasks for every shot. Only after the necessary prerequisite tasks for a particular shot is completed, you should attempt to further try to complete all the tasks it needs, for the shot to be graduated into the final production
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Resources
 * [Opensource Assets by Netflix](https://opencontent.netflix.com/)
