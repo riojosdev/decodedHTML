@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js ayu">
+<html lang="en" class="ayu sidebar-visible" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
@@ -17,57 +17,72 @@
           gtag('config', 'G-Y7D01T30H4');
         </script>
         
-<meta property="og:type" content="article">
+        <meta property="og:type" content="article">
         <meta property="article:author" content="https://riojos.in/">
         <meta property="article:publisher" content="https://riojos.in/">
         <meta property="og:url">
-<meta property="og:description" content="We help the programmer in you to code better, faster, cleaner. We contain the best practices every programmer should follow. You may also find occasional Rust articles here. Also, HTML is not a real programming language!">
+        <meta property="og:description" content="We help the programmer in you to code better, faster, cleaner. We contain the best practices every programmer should follow. You may also find occasional Rust articles here. Also, HTML is not a real programming language!">
         <meta property="og:title" content="NEXTJS Portfolio Redesign with TailwindCSS, ChakraUI &amp; Morphing Gradient Background - 🦀 decodedHTML 🦀">
         <meta property="og:image" content="https://decodedhtml.com/images/preview.png">
         <meta property="og:image:width" content="1200">
         <meta property="og:image:height" content="630">
         <meta property="og:image:type" content="image/png">
         
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url">
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url">
         <meta property="twitter:description" content="We help the programmer in you to code better, faster, cleaner. We contain the best practices every programmer should follow. You may also find occasional Rust articles here. Also, HTML is not a real programming language!">
         <meta property="twitter:image" content="https://decodedhtml.com/images/preview.png">
         <meta property="twitter:title" content="NEXTJS Portfolio Redesign with TailwindCSS, ChakraUI &amp; Morphing Gradient Background - 🦀 decodedHTML 🦀">
 
         <meta name="description" content="We help the programmer in you to code better, faster, cleaner. We contain the best practices every programmer should follow. You may also find occasional Rust articles here. Also, HTML is not a real programming language!">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#ffffff" />
+        <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="../favicon.svg">
-        <link rel="shortcut icon" href="../favicon.png">
-        <link rel="stylesheet" href="../css/variables.css">
-        <link rel="stylesheet" href="../css/general.css">
-        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="icon" href="../favicon-c84f1e02.svg">
+        <link rel="shortcut icon" href="../favicon-78dcbcd7.png">
+        <link rel="stylesheet" href="../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../css/general-2459343d.css">
+        <link rel="stylesheet" href="../css/chrome-ae938929.css">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
-        <link rel="stylesheet" href="../fonts/fonts.css">
+        <link rel="stylesheet" href="../fonts/fonts-9644e21d.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="../highlight.css">
-        <link rel="stylesheet" href="../tomorrow-night.css">
-        <link rel="stylesheet" href="../ayu-highlight.css">
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
 
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "ayu";
+            const default_dark_theme = "ayu";
+            window.path_to_searchindex_js = "../searchindex-d515a73f.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc-89d0faed.js"></script>
     </head>
     <body>
-        <!-- Provide site root to javascript -->
-        <script>
-            var path_to_root = "../";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "ayu" : "ayu";
-        </script>
-
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
         <script>
             try {
-                var theme = localStorage.getItem('mdbook-theme');
-                var sidebar = localStorage.getItem('mdbook-sidebar');
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
 
                 if (theme.startsWith('"') && theme.endsWith('"')) {
                     localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
@@ -81,56 +96,69 @@
 
         <!-- Set the theme before any content is loaded, prevents flash -->
         <script>
-            var theme;
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
-            var html = document.querySelector('html');
-            html.classList.remove('no-js')
+            const html = document.documentElement;
             html.classList.remove('ayu')
             html.classList.add(theme);
-            html.classList.add('js');
+            html.classList.add("js");
         </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
 
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
-            var html = document.querySelector('html');
-            var sidebar = 'hidden';
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
             }
-            html.classList.remove('sidebar-visible');
-            html.classList.add("sidebar-" + sidebar);
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
         </script>
 
-        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../about.html">About Me</a></li><li class="chapter-item expanded affix "><a href="../ai.html">AI Usage</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">VFX</li><li class="chapter-item expanded "><a href="../vfx/south-indian-malayalam-film-anomie-uses-sound-particles.html">Mollywood Film Anomie uses Sound Particles for their Sound Production</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Web3</li><li class="chapter-item expanded "><a href="../web3/setup-your-own-standalone-stellar-blockchain-on-your-system.html">Setup your own Standalone/Local Stellar Blockchain to test Smart Contracts & dApps</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Content Creation</li><li class="chapter-item expanded "><a href="../content-creation/dealing-with-content-sharks.html">How to Deal with Content Sharks</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">DevLog</li><li class="chapter-item expanded "><a href="../devlog/nextjs-vercel-portfolio-redesign-with-tailwindcss-chakraui-and-morphing-gradient-background.html" class="active">NEXTJS Portfolio Redesign with TailwindCSS, ChakraUI & Morphing Gradient Background</a></li><li class="chapter-item expanded "><a href="../devlog/gsoc-2025/my-three-proposals-were-rejected-but-i-learned-how-different-opensource-organizations-accepts-a-contribution-from-the-community.html">My Three Proposals Were Rejected. But I Learned How Different OpenSource Organizations Accepts A Contribution From The Community</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Rust Articles</li><li class="chapter-item expanded "><a href="../experimenting-with-rust.html">Experimenting With Rust</a></li><li class="chapter-item expanded "><a href="../serenity.html">Power of Rust in the palm of my Discord Server</a></li><li class="chapter-item expanded "><a href="../why-i-choose-rust.html">Why I choose Rust</a></li><li class="chapter-item expanded "><a href="../lunarvim-for-rustaceans.html">Setting up Lunarvim for Rust DevOps</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Best Practices for Programmers</li><li class="chapter-item expanded "><a href="../remove-console-logs-in-production.html">Remove console.logs in Production</a></li><li class="chapter-item expanded "><a href="../protecting-reducing-eye-strain-programmers.html">Reducing & Protecting from Eye Strain for Programmers</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Personal Blabs</li><li class="chapter-item expanded "><a href="../decoding-html-is-not-a-crime.html">Decoding HTML is not a Crime</a></li><li class="chapter-item expanded "><a href="../useless-opensource-contributions.html">My not-really-useless opensource contributions</a></li><li class="chapter-item expanded "><a href="../normalize-inclusive-language.html">Normalize use of Inclusive Language</a></li></ol>
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
             </div>
-            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
-        <div id="page-wrapper" class="page-wrapper">
+        <div id="mdbook-page-wrapper" class="page-wrapper">
 
             <div class="page">
-                                <div id="menu-bar-hover-placeholder"></div>
-                <div id="menu-bar" class="menu-bar sticky bordered">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
-                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
-                            <i class="fa fa-bars"></i>
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
                         </button>
-                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
-                            <i class="fa fa-paint-brush"></i>
-                        </button>
-                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
                         </ul>
-                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
-                            <i class="fa fa-search"></i>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
                         </button>
                     </div>
 
@@ -141,100 +169,106 @@
                     </div>
                 </div>
 
-                <div id="search-wrapper" class="hidden">
-                    <form id="searchbar-outer" class="searchbar-outer">
-                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
                     </form>
-                    <div id="searchresults-outer" class="searchresults-outer hidden">
-                        <div id="searchresults-header" class="searchresults-header"></div>
-                        <ul id="searchresults">
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
                         </ul>
                     </div>
                 </div>
 
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
                 <script>
-                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
-                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
-                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
                         link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
                     });
                 </script>
 
-                <div id="content" class="content">
+                <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="portfolio-redesigned-using-nextjs-with-tailwindcss-chakraui--a-morphing-gradient-background"><a class="header" href="#portfolio-redesigned-using-nextjs-with-tailwindcss-chakraui--a-morphing-gradient-background">Portfolio Redesigned using NEXT.JS with TailwindCSS, ChakraUI &amp; a Morphing Gradient Background</a></h1>
 <img src="./../images/riojos-portfolio-home-webpage-redesign.png" id="meta_imgz" alt="the home page of riojos.in, a transparent-blurred navigation bar, and hero section is visible. There background is primarily in blue color, and a big gradient colored circles morphed into each other is shown just behind the nav bar and the profile image in the hero section. A short description about myself is shown just below the profile image and a scroll progress tracker is shown at the bottom right.">
 <p>So, just wanted to prepare a devlog about my redesign of my portfolio website.</p>
-<p><strong><p id="meta_descriptionz">Let's go into the behind scenes of how I redesigned my web-app development &amp; graphic design webpage, riojos.in. Built using NEXT.JS 14.2.13, TailwindCSS, ChakraUI &amp; a Morphing Gradient Background by WeCoded's Youtube Tutorial. I deployed the final webpage on Vercel! Let's go into more depth on the development.</p></strong></p>
+<p><strong>
+<p id="meta_descriptionz">Let’s go into the behind scenes of how I redesigned my web-app development &amp; graphic design webpage, riojos.in. Built using NEXT.JS 14.2.13, TailwindCSS, ChakraUI &amp; a Morphing Gradient Background by WeCoded’s Youtube Tutorial. I deployed the final webpage on Vercel! Let’s go into more depth on the development.</p>
+</strong></p>
 <h2 id="a-constant-frontend-framework-for-a-consistent-portfolio-progression"><a class="header" href="#a-constant-frontend-framework-for-a-consistent-portfolio-progression">A Constant Frontend Framework for A Consistent Portfolio Progression</a></h2>
 <p>My decision for the redesign started when I wanted a page to showcase my projects &amp; also to represent my tech journey.</p>
 <h3 id="before-the-redesign"><a class="header" href="#before-the-redesign">Before the Redesign</a></h3>
-<p>My last design had only just an user interface with some simple HTML div elements, CSS &amp; an incomplete skeleton <a href="https://gsap.com/">GSAP</a> animation of a section where latest updates would be shown. </p>
-<p>I thought to show some blogs I written in that component. But that would've meant I would be skipping my opportunity to develop some projects to showcase my skills. So participated in a hackathon to get that pressure to build &amp; ship fast. I built a Web3 Dapp which is <a href="https://riojos.in/showmecode">listed on my portfolio</a> or go through the <a href="https://github.com/riojosdev/lekhanam4stella">repository for Lekhanam dApp on GitHub</a>, you could maybe even play with the <a href="https://lekhanam.vercel.app/">demo which is deployed onto the Stellar Blockchain TestNet</a>. Some developers work well under pressure, like me. Not good behavior, I know. But I usually get distracted. This blog is a way for me to keep me accountable at times of need. </p>
+<p>My last design had only just an user interface with some simple HTML div elements, CSS &amp; an incomplete skeleton <a href="https://gsap.com/">GSAP</a> animation of a section where latest updates would be shown.</p>
+<p>I thought to show some blogs I written in that component. But that would’ve meant I would be skipping my opportunity to develop some projects to showcase my skills. So participated in a hackathon to get that pressure to build &amp; ship fast. I built a Web3 Dapp which is <a href="https://riojos.in/showmecode">listed on my portfolio</a> or go through the <a href="https://github.com/riojosdev/lekhanam4stella">repository for Lekhanam dApp on GitHub</a>, you could maybe even play with the <a href="https://lekhanam.vercel.app/">demo which is deployed onto the Stellar Blockchain TestNet</a>. Some developers work well under pressure, like me. Not good behavior, I know. But I usually get distracted. This blog is a way for me to keep me accountable at times of need.</p>
 <blockquote>
-<p>In this era aren't we all living in the attention driven economy. And we all do experience ADHD from time to time, I guess. Some cope well better than others. Or seems to be.</p>
+<p>In this era aren’t we all living in the attention driven economy. And we all do experience ADHD from time to time, I guess. Some cope well better than others. Or seems to be.</p>
 </blockquote>
-<p>Unfortunately, that component went underdeveloped for so long, as I didn't have any cool/fully finished projects to show on my portfolio. It's not that I didn't have any projects to show for, but my skills when I first started and where I'm now is entirely different. The plans I had when I first started wasn't recognized much. So, everytime kept trying to reimplement my portfolio. Over and over again.</p>
+<p>Unfortunately, that component went underdeveloped for so long, as I didn’t have any cool/fully finished projects to show on my portfolio. It’s not that I didn’t have any projects to show for, but my skills when I first started and where I’m now is entirely different. The plans I had when I first started wasn’t recognized much. So, everytime kept trying to reimplement my portfolio. Over and over again.</p>
 <h3 id="for-ease-of-development-the-infinite-choices-for-a-frontend-framework"><a class="header" href="#for-ease-of-development-the-infinite-choices-for-a-frontend-framework">For Ease of Development: The Infinite Choices for a Frontend Framework</a></h3>
-<p>If I had a constant layout or a tech stack. I would have sticked on to it. But everytime it get's changed. And almost everytime I wanted to reimplement my portfolio on different tech stack. </p>
+<p>If I had a constant layout or a tech stack. I would have sticked on to it. But everytime it get’s changed. And almost everytime I wanted to reimplement my portfolio on different tech stack.</p>
 <blockquote>
 <p>JavaScript always had some new cool framework, that spoke about the next thing that felt like it was here to stay and be in the game for the long run. But as I was just starting in this tech I blindly believed in that.</p>
 </blockquote>
-<p>This domain have been hosted on different tech stack. First it was just <strong>plain HTML/CSS/JS</strong>, then later rebuilt using <strong>PHP's Laravel framework</strong>. As the server got expired I had to migrate my Laravel page <strong>back to just a static page with HTML/CSS/JS</strong>. Then tried out adding this as a custom domain for my <strong>Hashnode blog</strong>, later <strong>Tumblr</strong>. Still wanted to implement a lot of features as my development skills were getting better, I was too excited to try out some cool things I learned. I wanted more freedom and control of how my page is looking. Implemented a minimalistic page using <strong>again HTML/CSS/JS</strong> speaking about my services and where to find me - socials and email. This was the last stack I had been using before my current redesign implementation, that is with <strong>React's NEXT.JS</strong>.</p>
+<p>This domain have been hosted on different tech stack. First it was just <strong>plain HTML/CSS/JS</strong>, then later rebuilt using <strong>PHP’s Laravel framework</strong>. As the server got expired I had to migrate my Laravel page <strong>back to just a static page with HTML/CSS/JS</strong>. Then tried out adding this as a custom domain for my <strong>Hashnode blog</strong>, later <strong>Tumblr</strong>. Still wanted to implement a lot of features as my development skills were getting better, I was too excited to try out some cool things I learned. I wanted more freedom and control of how my page is looking. Implemented a minimalistic page using <strong>again HTML/CSS/JS</strong> speaking about my services and where to find me - socials and email. This was the last stack I had been using before my current redesign implementation, that is with <strong>React’s NEXT.JS</strong>.</p>
 <blockquote>
-<p>It was not about finding a permanent tech stack, but to have a devops system in place to keep trying out new tech stacks. </p>
+<p>It was not about finding a permanent tech stack, but to have a devops system in place to keep trying out new tech stacks.</p>
 </blockquote>
 <h3 id="my-own-frontend-design-system-jaggery"><a class="header" href="#my-own-frontend-design-system-jaggery">My Own Frontend Design System: Jaggery</a></h3>
-<p>So as the tech stack was getting evolved day by day, it was hard to keep reimplementing my entire page on the latest tech stack. So I started a opensource project <a href="https://www.npmjs.com/package/jaggery">Jaggery</a>. To be able to import different components from different Frontend Frameworks. That way I have a chance to test out the framework as well as, not stress too much about the next framework that gives me a FOMO for not using it's coolest, awesome-est, modernest, never before seen, new features.</p>
-<p><a href="https://www.npmjs.com/package/jaggery">Jaggery</a> is released as a monorepo component library on NPM, where different components get's built using different frontend design frameworks and anyone could just add them to their plain HTML/CSS/JS page.</p>
+<p>So as the tech stack was getting evolved day by day, it was hard to keep reimplementing my entire page on the latest tech stack. So I started a opensource project <a href="https://www.npmjs.com/package/jaggery">Jaggery</a>. To be able to import different components from different Frontend Frameworks. That way I have a chance to test out the framework as well as, not stress too much about the next framework that gives me a FOMO for not using it’s coolest, awesome-est, modernest, never before seen, new features.</p>
+<p><a href="https://www.npmjs.com/package/jaggery">Jaggery</a> is released as a monorepo component library on NPM, where different components get’s built using different frontend design frameworks and anyone could just add them to their plain HTML/CSS/JS page.</p>
 <h2 id="portfolio-redesign-the-first-frontend-components"><a class="header" href="#portfolio-redesign-the-first-frontend-components">Portfolio Redesign: The First Frontend Components</a></h2>
 <h3 id="navbar"><a class="header" href="#navbar">NavBar</a></h3>
-<img src="./../images/navbar-component-from-jaggery-library-transparent-background-with-glowing-link-on-hover.png" alt="A transparent and blurred navigation bar component with 4 internal links - which are home, about, project, services & 2 external links - for blog and mail is shown">
-<p>The NavBar component is primarily built to be imported into a create-react-app project. I built this component and published it onto my <a href="https://www.npmjs.com/package/jaggery">NPM Jaggery Library</a>. I had some issues on getting it directly imported into the NextJS portfolio project. </p>
-<p>I wanted to implement the portfolio first as I wanted to keep my presence alive during the development. So, I tried extracting the component and implementing it directly onto the NEXT.js project. Else I would've let my domain point to a broken, incomplete page where there was nothing exciting to make the user curious about my dev journey.</p>
-<h3 id="morphing-gradient-background---by-wecodeds-youtube-tutorial"><a class="header" href="#morphing-gradient-background---by-wecodeds-youtube-tutorial">Morphing Gradient Background - by WeCoded's YouTube Tutorial</a></h3>
-<p>The main attention driving factor to my portfolio is from this <a href="https://www.youtube.com/watch?v=Ml-B-W91gtw">background interactive Morphing Gradient animation tutorial by WeCoded's YouTube Channel</a>. On his tutorial I learned about how you can apply shaders using HTML SVG elements. I immediately got hooked on it. And since it looked really well on my portfolio.</p>
+<img src="./../images/navbar-component-from-jaggery-library-transparent-background-with-glowing-link-on-hover.png" alt="A transparent and blurred navigation bar component with 4 internal links - which are home, about, project, services &amp; 2 external links - for blog and mail is shown">
+<p>The NavBar component is primarily built to be imported into a create-react-app project. I built this component and published it onto my <a href="https://www.npmjs.com/package/jaggery">NPM Jaggery Library</a>. I had some issues on getting it directly imported into the NextJS portfolio project.</p>
+<p>I wanted to implement the portfolio first as I wanted to keep my presence alive during the development. So, I tried extracting the component and implementing it directly onto the NEXT.js project. Else I would’ve let my domain point to a broken, incomplete page where there was nothing exciting to make the user curious about my dev journey.</p>
+<h3 id="morphing-gradient-background---by-wecodeds-youtube-tutorial"><a class="header" href="#morphing-gradient-background---by-wecodeds-youtube-tutorial">Morphing Gradient Background - by WeCoded’s YouTube Tutorial</a></h3>
+<p>The main attention driving factor to my portfolio is from this <a href="https://www.youtube.com/watch?v=Ml-B-W91gtw">background interactive Morphing Gradient animation tutorial by WeCoded’s YouTube Channel</a>. On his tutorial I learned about how you can apply shaders using HTML SVG elements. I immediately got hooked on it. And since it looked really well on my portfolio.</p>
 <p>I want to do more research on it &amp; also share with you guys. So I have started planning a course on XR (AR/VR/MR) &amp; it would start with the HTML SVG elements. Will be posting soon a link about it. Make sure to follow me on any socials you can find on my portfolio page to stay updated on when it would be available.</p>
 <h3 id="scroll-progress-circular-tracker"><a class="header" href="#scroll-progress-circular-tracker">Scroll Progress Circular Tracker</a></h3>
-<img src="./../images/scroll-circular-progress-tracker-with-transparent-background.png" alt="a small transparent circular progress tracker implemented using chakraui, the progress is shown using a slightly more darker shade and the label shows it's at 52%">
-<p>The idea for a scroll tracker was inspired by my friend's blog page 😉. I used <a href="https://v2.chakra-ui.com/">ChakraUI</a> to implement the their <a href="https://v2.chakra-ui.com/docs/components/circular-progress">circular progress tracker</a> design. Added a custom CSS on top of ChakraUI's component, as I had some issues in getting my desired CSS Style to be applied using ChakraUI's CSS styling configurations.</p>
-<h4 id="how-i-added-custom-css-styling-on-top-of-chakrauis-predefined-styles"><a class="header" href="#how-i-added-custom-css-styling-on-top-of-chakrauis-predefined-styles">How I added custom CSS styling on top of ChakraUI's predefined styles</a></h4>
+<img src="./../images/scroll-circular-progress-tracker-with-transparent-background.png" alt="a small transparent circular progress tracker implemented using chakraui, the progress is shown using a slightly more darker shade and the label shows it&#39;s at 52%">
+<p>The idea for a scroll tracker was inspired by my friend’s blog page 😉. I used <a href="https://v2.chakra-ui.com/">ChakraUI</a> to implement the their <a href="https://v2.chakra-ui.com/docs/components/circular-progress">circular progress tracker</a> design. Added a custom CSS on top of ChakraUI’s component, as I had some issues in getting my desired CSS Style to be applied using ChakraUI’s CSS styling configurations.</p>
+<h4 id="how-i-added-custom-css-styling-on-top-of-chakrauis-predefined-styles"><a class="header" href="#how-i-added-custom-css-styling-on-top-of-chakrauis-predefined-styles">How I added custom CSS styling on top of ChakraUI’s predefined styles</a></h4>
 <p>I just opened up the browser dev console and looked at the CSS classes ChakraUI has defined. I tried adding my own style changes directly in the dev console to see what element was getting stylized. Found out that a custom svg element defined by ChakraUI and a seperate div element to represent the text was the classes I needed to change the stylings.</p>
 <img src="./../images/chakraui-progress-tracker-label-css-styles-on-browser-console.png" alt="CSS stylings defined in browser console is shown, a div element with two child elements, one is svg element that defines the progress circle and the other is a div element to contain the label for denoting the progress">
-<div class="footnote-definition" id="note"><sup class="footnote-definition-label">1</sup>
-<p>The image above shows the CSS styles defined by ChakraUI. The ones I wanted to use were <code>chakra-progress__track</code> &amp; <code>chakra-progress_label</code>.</p>
-</div>
 <p>I just then need to define in my NEXT.JS project for the scroll component the appropriate CSS styling. I also found that due to how my custom CSS was getting loaded, my styling was being overwritten. Which I was able to find another way by just adding the <code>!important</code> rule next to the CSS property I changed. PS. I defined my CSS styling for this particular as a global CSS style in the NEXTJS layout file.</p>
 <h3 id="card-container-components"><a class="header" href="#card-container-components">Card Container Components</a></h3>
-<img src="./../images/transparent-designed-card-layout-by-chakraui-and-container-component-using-tailwindcss.png" alt="A single blurred-transparent card component over the gradient background showing a project I built. Which is Lekhanam, a web3 dapp. An large thumbnail of the dapp user interface is shown. A one liner description that says 'Lekhanam is a Web3 dApp & smart contract on the Stellar Blockchain, that can be used to prepare greeting cards (with a hearted letter emoji - 💌)'">
+<img src="./../images/transparent-designed-card-layout-by-chakraui-and-container-component-using-tailwindcss.png" alt="A single blurred-transparent card component over the gradient background showing a project I built. Which is Lekhanam, a web3 dapp. An large thumbnail of the dapp user interface is shown. A one liner description that says &#39;Lekhanam is a Web3 dApp &amp; smart contract on the Stellar Blockchain, that can be used to prepare greeting cards (with a hearted letter emoji - 💌)&#39;">
 <p>The different <a href="https://v2.chakra-ui.com/docs/components/card/usage">card container components from ChakraUI</a> were used to represent a section. Which was built &amp; stylized using <a href="https://tailwindcss.com/">TailwindCSS</a>. Additional CSS styling were also added on top of ChakraUI to match the whole theme of the Portfolio page.</p>
 <h2 id="glimpse-into-the-content-of-the-pages"><a class="header" href="#glimpse-into-the-content-of-the-pages">Glimpse into the content of the Pages</a></h2>
 <h3 id="about"><a class="header" href="#about">About</a></h3>
 <p><a href="https://riojos.in/whoami">The about page</a> has a brief description about my journey into freelancing. How I started programming. What are my main motivations, lessons &amp; things like that. Do give a read to get to know more about me.</p>
 <h3 id="projects"><a class="header" href="#projects">Projects</a></h3>
-<p>I listed my own ideas on <a href="https://riojos.in/showmecode">the project page</a> that I tried to get my hands dirty. It shows what I really would do. And what all I have learned. The opportunity of each project is different. It gives you an idea, of what is possible with me contributing. And what my project is able to do. Don't let the projects go unseen, as they have immense potential to create a big dent in this tiny blue planet. But to take it forward, you would need to love dirt.</p>
+<p>I listed my own ideas on <a href="https://riojos.in/showmecode">the project page</a> that I tried to get my hands dirty. It shows what I really would do. And what all I have learned. The opportunity of each project is different. It gives you an idea, of what is possible with me contributing. And what my project is able to do. Don’t let the projects go unseen, as they have immense potential to create a big dent in this tiny blue planet. But to take it forward, you would need to love dirt.</p>
 <h3 id="services"><a class="header" href="#services">Services</a></h3>
 <p>On the <a href="https://riojos.in/needhelp">service page</a> most services requested from me. These are not my only capabilities, I can provide, but since these are the most often things, requested from me. I added it so you can reach out to me easily. Describing more would just mean, I would be forcing my ideas on to you. We all live in &amp; come from different dirt on this planet, no?</p>
 <h2 id="server-actions--middlewares"><a class="header" href="#server-actions--middlewares">Server Actions &amp; Middlewares</a></h2>
 <p>Postgres Storage on Vercel powered by NeonDB
 I used PostgreSQL as the database by following the <a href="https://vercel.com/docs/storage/vercel-postgres/sdk">Vercel Postgres Storage QuickStart</a>. Vercel let me have an easy to use dashboard to be able to monitor postgres data. I used it for the enquiry form on my portfolio.</p>
-<p>The form which queries the database is built as a client component which calls a server action to interact with the database. Also I learned that you can only call these server actions in form actions, event handlers &amp; React's useEffect hooks. This is actually cool and at the same time grinds my programming gears. You can <a href="https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations#behavior">read about NEXT.JS server action docs on Vercel</a></p>
+<p>The form which queries the database is built as a client component which calls a server action to interact with the database. Also I learned that you can only call these server actions in form actions, event handlers &amp; React’s useEffect hooks. This is actually cool and at the same time grinds my programming gears. You can <a href="https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations#behavior">read about NEXT.JS server action docs on Vercel</a></p>
 <h2 id="nextjs-redirect"><a class="header" href="#nextjs-redirect">NextJS Redirect</a></h2>
-<p>The NEXT.js config file had an option to make a redirect towards an address. I wanted to use it for having an fancy human readable URL format, rather than something that was too long to even be visible in the browser address bar. The shorter URLs makes it more memorable. So loved that NEXT.js offered it directly on it's config.</p>
-<p>But before getting to know the option of redirect from the NEXT.js config, I tried implementing a server action to redirect the page. So that I may be able to display a loading animation that the user was being redirected towards an external link. If I could've been able to implement that, I could've used the meta tags and log the visit directly on my NEXT.js portfolio.</p>
-<p>I don't know if this is not possible or not, but the data couldn't be SELECTed and received on the client component even with the an external server action. The redirect function was defined in the client component inside an useEffect hook. So I wanted my data to reach the function call inside useEffect. But the SQL query as it is always async, it returned a promise. And it was not possible to get the value of the promise. I was hacking my might's off on this. </p>
+<p>The NEXT.js config file had an option to make a redirect towards an address. I wanted to use it for having an fancy human readable URL format, rather than something that was too long to even be visible in the browser address bar. The shorter URLs makes it more memorable. So loved that NEXT.js offered it directly on it’s config.</p>
+<p>But before getting to know the option of redirect from the NEXT.js config, I tried implementing a server action to redirect the page. So that I may be able to display a loading animation that the user was being redirected towards an external link. If I could’ve been able to implement that, I could’ve used the meta tags and log the visit directly on my NEXT.js portfolio.</p>
+<p>I don’t know if this is not possible or not, but the data couldn’t be SELECTed and received on the client component even with the an external server action. The redirect function was defined in the client component inside an useEffect hook. So I wanted my data to reach the function call inside useEffect. But the SQL query as it is always async, it returned a promise. And it was not possible to get the value of the promise. I was hacking my might’s off on this.</p>
+<hr>
+<ol class="footnote-definition"></ol>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                             <a rel="prev" href="../content-creation/dealing-with-content-sharks.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
-                                <i class="fa fa-angle-left"></i>
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
 
-                            <a rel="next" href="../devlog/gsoc-2025/my-three-proposals-were-rejected-but-i-learned-how-different-opensource-organizations-accepts-a-contribution-from-the-community.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
+                            <a rel="next prefetch" href="../devlog/gsoc-2025/my-three-proposals-were-rejected-but-i-learned-how-different-opensource-organizations-accepts-a-contribution-from-the-community.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                             </a>
 
                         <div style="clear: both"></div>
@@ -244,15 +278,21 @@ I used PostgreSQL as the database by following the <a href="https://vercel.com/d
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                     <a rel="prev" href="../content-creation/dealing-with-content-sharks.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
-                        <i class="fa fa-angle-left"></i>
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
 
-                    <a rel="next" href="../devlog/gsoc-2025/my-three-proposals-were-rejected-but-i-learned-how-different-opensource-organizations-accepts-a-contribution-from-the-community.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
+                    <a rel="next prefetch" href="../devlog/gsoc-2025/my-three-proposals-were-rejected-but-i-learned-how-different-opensource-organizations-accepts-a-contribution-from-the-community.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                     </a>
             </nav>
 
         </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
 
         <!-- Livereload script (if served using the cli tool) -->
         <script>
@@ -272,22 +312,23 @@ I used PostgreSQL as the database by following the <a href="https://vercel.com/d
         </script>
 
 
-
         <script>
             window.playground_copyable = true;
         </script>
 
 
-        <script src="../elasticlunr.min.js"></script>
-        <script src="../mark.min.js"></script>
-        <script src="../searcher.js"></script>
+        <script src="../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../mark-09e88c2c.min.js"></script>
+        <script src="../searcher-c2a407aa.js"></script>
 
-        <script src="../clipboard.min.js"></script>
-        <script src="../highlight.js"></script>
-        <script src="../book.js"></script>
+        <script src="../clipboard-1626706a.min.js"></script>
+        <script src="../highlight-abc7f01d.js"></script>
+        <script src="../book-7c9b598d.js"></script>
 
         <!-- Custom JS scripts -->
 
 
+
+    </div>
     </body>
 </html>
