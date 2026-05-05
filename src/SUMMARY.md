@@ -3,9 +3,9 @@
 [AI Usage](./ai.md)
 
 ---
-# VFX
+# GameDev & VFX
 - [Mollywood Film Anomie uses Sound Particles for their Sound Production](./vfx/south-indian-malayalam-film-anomie-uses-sound-particles.md)
-- [Animations](./vfx/animations-out-there.md)
+- [Building a Simple Asset-to-Gameplay Pipeline using Blender and UEFN](./devlog/datsi-x-tiltedu/building-a-simple-asset-to-gameplay-pipeline-using-blender-and-uefn.md)
 
 ---
 # Web3
