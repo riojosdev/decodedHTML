@@ -6,6 +6,19 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>https://decodedhtml.com/why-i-dont-use-whatsapp-and-prefers-all-communications-to-be-done-using-emails.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <lastmod>2026-07-20</lastmod>
+    </url>
+    <url>
+        <loc>https://decodedhtml.com/devlog/datsi-x-tiltedu/building-a-simple-asset-to-gameplay-pipeline-using-blender-and-uefn.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <lastmod>2026-05-05</lastmod>
+    </url>
+
+    <url>
         <loc>https://decodedhtml.com/devlog/nextjs-vercel-portfolio-redesign-with-tailwindcss-chakraui-and-morphing-gradient-background.html</loc>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>

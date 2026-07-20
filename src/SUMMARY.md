@@ -1,6 +1,7 @@
 # Summary
 [About Me](./about.md)
 [AI Usage](./ai.md)
+[Why Only Accepts Email and not WhatsApp Communications](./why-i-dont-use-whatsapp-and-prefers-all-communications-to-be-done-using-emails.md)
 
 ---
 # GameDev & VFX
