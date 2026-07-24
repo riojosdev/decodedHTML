@@ -20,6 +20,7 @@
 # DevLog
 - [NEXTJS Portfolio Redesign with TailwindCSS, ChakraUI & Morphing Gradient Background](./devlog/nextjs-vercel-portfolio-redesign-with-tailwindcss-chakraui-and-morphing-gradient-background.md)
 - [My Three Proposals Were Rejected. But I Learned How Different OpenSource Organizations Accepts A Contribution From The Community](./devlog/gsoc-2025/my-three-proposals-were-rejected-but-i-learned-how-different-opensource-organizations-accepts-a-contribution-from-the-community.md)
+- [If I were to hire an UI/UX artist for my ReadSync Prototype](./devlog/readsync/if-i-were-to-hire-a-uiux-artist-for-my-readsync-prototype.md)
 
 ---
 # Rust Articles
